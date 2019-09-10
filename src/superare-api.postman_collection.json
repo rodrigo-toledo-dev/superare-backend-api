@@ -35,17 +35,21 @@
 					"response": []
 				},
 				{
-					"name": "Create User",
+					"name": "Create User Mantenedor",
 					"request": {
-						"method": "GET",
+						"method": "POST",
 						"header": [
 							{
 								"key": "Content-Type",
 								"name": "Content-Type",
-								"value": "application/json",
-								"type": "text"
+								"type": "text",
+								"value": "application/json"
 							}
 						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"level\": \"mantenedor\"\n}"
+						},
 						"url": {
 							"raw": "http://localhost:3000/users",
 							"protocol": "http",
@@ -61,7 +65,37 @@
 					"response": []
 				},
 				{
-					"name": "Update User",
+					"name": "Create User Admin",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"level\": \"admin\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update first Mantenedor User to admin",
 					"request": {
 						"method": "PUT",
 						"header": [
@@ -72,6 +106,40 @@
 								"value": "application/json"
 							}
 						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"_id\": \"5d77f4bc1fa2564f80193911\",\n\t\"level\": \"admin\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update first Admin User to Mantenedor",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"_id\": \"5d77f4ae1fa2564f80193910\",\n\t\"level\": \"mantenedor\"\n}"
+						},
 						"url": {
 							"raw": "http://localhost:3000/users",
 							"protocol": "http",
@@ -98,6 +166,10 @@
 								"value": "application/json"
 							}
 						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"_id\": \"5d77f59d13b47a511acc17fb\"\n}"
+						},
 						"url": {
 							"raw": "http://localhost:3000/users",
 							"protocol": "http",
