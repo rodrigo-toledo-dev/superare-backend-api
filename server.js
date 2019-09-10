@@ -9,8 +9,6 @@ mongoose.connect('mongodb://localhost:27017/superare-api', { useNewUrlParser: tr
 
 requireDir('./src/models');
 
-const Server = mongoose.model('Server');
-
 app.use('/', require('./src/routes'));
 
 app.listen(3000);
