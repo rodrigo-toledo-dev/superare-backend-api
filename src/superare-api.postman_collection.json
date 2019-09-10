@@ -218,31 +218,35 @@
 				{
 					"name": "Create Server",
 					"request": {
-						"method": "GET",
+						"method": "POST",
 						"header": [
 							{
 								"key": "Content-Type",
 								"name": "Content-Type",
-								"value": "application/json",
-								"type": "text"
+								"type": "text",
+								"value": "application/json"
 							}
 						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"client\": \"superare\",\n\t\"serverIp\": \"127.0.0.1\",\n\t\"status\": \"ativo\",\n\t\"user\": \"5d77f4ae1fa2564f80193910\"\n}"
+						},
 						"url": {
-							"raw": "http://localhost:3000/users",
+							"raw": "http://localhost:3000/servers",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "3000",
 							"path": [
-								"users"
+								"servers"
 							]
 						}
 					},
 					"response": []
 				},
 				{
-					"name": "Update Server",
+					"name": "Update Server to Inativo",
 					"request": {
 						"method": "PUT",
 						"header": [
@@ -253,15 +257,19 @@
 								"value": "application/json"
 							}
 						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"_id\": \"5d77fec3ae2e1b5a07bddff5\",\n\t\"client\": \"superare\",\n\t\"serverIp\": \"127.0.0.1\",\n\t\"status\": \"inativo\",\n\t\"user\": \"5d77f4ae1fa2564f80193910\"\n}"
+						},
 						"url": {
-							"raw": "http://localhost:3000/users",
+							"raw": "http://localhost:3000/servers",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "3000",
 							"path": [
-								"users"
+								"servers"
 							]
 						}
 					},
@@ -279,15 +287,19 @@
 								"value": "application/json"
 							}
 						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"_id\": \"5d77fed0ae2e1b5a07bddffa\"\n}"
+						},
 						"url": {
-							"raw": "http://localhost:3000/users",
+							"raw": "http://localhost:3000/servers",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "3000",
 							"path": [
-								"users"
+								"servers"
 							]
 						}
 					},
