@@ -35,9 +35,38 @@
 					"response": []
 				},
 				{
-					"name": "Create User Mantenedor",
+					"name": "Return Users List",
 					"request": {
-						"method": "POST",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Return the first User",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
 						"header": [
 							{
 								"key": "Content-Type",
@@ -48,7 +77,49 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"level\": \"mantenedor\"\n}"
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:3000/users/5d795cd4bf7e584c73f54e32",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"5d795cd4bf7e584c73f54e32"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create User Mantenedor",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "level",
+									"value": "mantenedor",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "rodrigo@rtoledo.inf.br",
+									"type": "text"
+								}
+							]
 						},
 						"url": {
 							"raw": "http://localhost:3000/users",
@@ -72,13 +143,24 @@
 							{
 								"key": "Content-Type",
 								"name": "Content-Type",
-								"type": "text",
-								"value": "application/json"
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
 							}
 						],
 						"body": {
-							"mode": "raw",
-							"raw": "{\n\t\"level\": \"admin\"\n}"
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "level",
+									"value": "admin",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "rodrigo.toledo.dev@gmail.com",
+									"type": "text"
+								}
+							]
 						},
 						"url": {
 							"raw": "http://localhost:3000/users",
@@ -102,23 +184,35 @@
 							{
 								"key": "Content-Type",
 								"name": "Content-Type",
-								"type": "text",
-								"value": "application/json"
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
 							}
 						],
 						"body": {
-							"mode": "raw",
-							"raw": "{\n\t\"_id\": \"5d77f4bc1fa2564f80193911\",\n\t\"level\": \"admin\"\n}"
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "level",
+									"value": "admin",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "rodrigo@rtoledo.inf.br",
+									"type": "text"
+								}
+							]
 						},
 						"url": {
-							"raw": "http://localhost:3000/users",
+							"raw": "http://localhost:3000/users/5d795d55bf7e584c73f54e34",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "3000",
 							"path": [
-								"users"
+								"users",
+								"5d795d55bf7e584c73f54e34"
 							]
 						}
 					},
@@ -132,23 +226,35 @@
 							{
 								"key": "Content-Type",
 								"name": "Content-Type",
-								"type": "text",
-								"value": "application/json"
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
 							}
 						],
 						"body": {
-							"mode": "raw",
-							"raw": "{\n\t\"_id\": \"5d77f4ae1fa2564f80193910\",\n\t\"level\": \"mantenedor\"\n}"
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "level",
+									"value": "mantenedor",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "rodrigo@rtoledo.inf.br",
+									"type": "text"
+								}
+							]
 						},
 						"url": {
-							"raw": "http://localhost:3000/users",
+							"raw": "http://localhost:3000/users/5d795d55bf7e584c73f54e34",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "3000",
 							"path": [
-								"users"
+								"users",
+								"5d795d55bf7e584c73f54e34"
 							]
 						}
 					},
@@ -162,23 +268,24 @@
 							{
 								"key": "Content-Type",
 								"name": "Content-Type",
-								"type": "text",
-								"value": "application/json"
+								"value": "text/html",
+								"type": "text"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"_id\": \"5d77f59d13b47a511acc17fb\"\n}"
+							"raw": ""
 						},
 						"url": {
-							"raw": "http://localhost:3000/users",
+							"raw": "http://localhost:3000/users/5d795cd2bf7e584c73f54e2e",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "3000",
 							"path": [
-								"users"
+								"users",
+								"5d795cd2bf7e584c73f54e2e"
 							]
 						}
 					},
@@ -216,9 +323,9 @@
 					"response": []
 				},
 				{
-					"name": "Create Server",
+					"name": "Return all inactives Servers",
 					"request": {
-						"method": "POST",
+						"method": "GET",
 						"header": [
 							{
 								"key": "Content-Type",
@@ -227,9 +334,135 @@
 								"value": "application/json"
 							}
 						],
+						"url": {
+							"raw": "http://localhost:3000/servers/inactives",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"servers",
+								"inactives"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Return the first Server",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/servers/5d79967847260c04ef2566c0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"servers",
+								"5d79967847260c04ef2566c0"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Server Inactive",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
 						"body": {
-							"mode": "raw",
-							"raw": "{\n\t\"client\": \"superare\",\n\t\"serverIp\": \"127.0.0.1\",\n\t\"status\": \"ativo\",\n\t\"user\": \"5d77f4ae1fa2564f80193910\"\n}"
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "client",
+									"value": "superare",
+									"type": "text"
+								},
+								{
+									"key": "serverIp",
+									"value": "127.0.0.1",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "inativo",
+									"type": "text"
+								},
+								{
+									"key": "user",
+									"value": "5d795cd4bf7e584c73f54e32",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/servers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"servers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Server Active",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "client",
+									"value": "superare",
+									"type": "text"
+								},
+								{
+									"key": "serverIp",
+									"value": "127.0.0.1",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "ativo",
+									"type": "text"
+								},
+								{
+									"key": "user",
+									"value": "5d795cd4bf7e584c73f54e32",
+									"type": "text"
+								}
+							]
 						},
 						"url": {
 							"raw": "http://localhost:3000/servers",
@@ -254,22 +487,44 @@
 								"key": "Content-Type",
 								"name": "Content-Type",
 								"type": "text",
-								"value": "application/json"
+								"value": "application/x-www-form-urlencoded"
 							}
 						],
 						"body": {
-							"mode": "raw",
-							"raw": "{\n\t\"_id\": \"5d77fec3ae2e1b5a07bddff5\",\n\t\"client\": \"superare\",\n\t\"serverIp\": \"127.0.0.1\",\n\t\"status\": \"inativo\",\n\t\"user\": \"5d77f4ae1fa2564f80193910\"\n}"
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "client",
+									"value": "superare-teste",
+									"type": "text"
+								},
+								{
+									"key": "serverIp",
+									"value": "127.0.0.2",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "inativo",
+									"type": "text"
+								},
+								{
+									"key": "user",
+									"value": "5d795cd4bf7e584c73f54e32",
+									"type": "text"
+								}
+							]
 						},
 						"url": {
-							"raw": "http://localhost:3000/servers",
+							"raw": "http://localhost:3000/servers/5d79952b47260c04ef2566be",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "3000",
 							"path": [
-								"servers"
+								"servers",
+								"5d79952b47260c04ef2566be"
 							]
 						}
 					},
@@ -283,23 +538,24 @@
 							{
 								"key": "Content-Type",
 								"name": "Content-Type",
-								"type": "text",
-								"value": "application/json"
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
 							}
 						],
 						"body": {
-							"mode": "raw",
-							"raw": "{\n\t\"_id\": \"5d77fed0ae2e1b5a07bddffa\"\n}"
+							"mode": "urlencoded",
+							"urlencoded": []
 						},
 						"url": {
-							"raw": "http://localhost:3000/servers",
+							"raw": "http://localhost:3000/servers/5d79952b47260c04ef2566be",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "3000",
 							"path": [
-								"servers"
+								"servers",
+								"5d79952b47260c04ef2566be"
 							]
 						}
 					},
