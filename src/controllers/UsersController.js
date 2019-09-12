@@ -8,6 +8,16 @@ module.exports = {
     return res.json(users);
   },
 
+  async list(req, res){
+    const users = await User.find();
+    let listUsers = [];
+    users.forEach(user => {
+      listUsers[user['_id']] = user['level'];
+    });
+    
+    return res.json(listUsers);
+  },
+
   async find(req, res){
     const user = await User.findById(req.params['_id']);
     return res.json(user);
