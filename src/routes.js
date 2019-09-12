@@ -4,9 +4,10 @@ const routes = express.Router();
 
 const UsersController = require('./controllers/UsersController');
 routes.get('/users', UsersController.index);
+routes.get('/users/:_id', UsersController.find);
 routes.post('/users', UsersController.save);
-routes.put('/users', UsersController.save);
-routes.delete('/users', UsersController.destroy);
+routes.put('/users/:_id', UsersController.save);
+routes.delete('/users/:_id', UsersController.destroy);
 
 const ServersController = require('./controllers/ServersController');
 routes.get('/servers', ServersController.index);
