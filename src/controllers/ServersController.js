@@ -13,6 +13,11 @@ module.exports = {
     return res.json(server);
   },
 
+  async inactives(req, res){
+    const servers = await Server.find({ status: 'inativo' }).populate('user');
+    return res.json(servers);
+  },
+
   async save(req, res){
     let server = null;
     if(req.params._id == undefined){

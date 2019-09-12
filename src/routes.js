@@ -12,6 +12,7 @@ routes.delete('/users/:_id', UsersController.destroy);
 
 const ServersController = require('./controllers/ServersController');
 routes.get('/servers', ServersController.index);
+routes.get('/servers/inactives', ServersController.inactives);
 routes.get('/servers/:_id', ServersController.find);
 routes.post('/servers', ServersController.save);
 routes.put('/servers/:_id', ServersController.save);
